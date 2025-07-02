@@ -22,25 +22,26 @@ class Program
             Console.Write("Enter a list of positive and negative numbers and type 0 when finished. ");
             yourNumber = int.Parse(Console.ReadLine());
 
-            if (yourNumber > 0)
+            if (yourNumber > 0)// determine where the user input stops.
             {
                 number.Add(yourNumber);
             }
         }
-
-        foreach (int item in number)
+        //loop to iterat through the list
+        foreach (float item in number)
         {
-            total += item;
-            numberCount += 1;
+            total += item;//update the sum of all numbers in the list.
+            numberCount += 1; //stores the total numbers of items in the list.
+            //Added if statement to get the largest number.
             if (item > largest)
             {
                 largest = item;
             }
+            //Added if statement to get the lowest positive number.
             if (item > 0 && item < lowest)
             {
                 lowest = item;
             }
-            Console.WriteLine(item);
         }
         average = total / numberCount;
         Console.WriteLine($"The Sum is: {total}");
