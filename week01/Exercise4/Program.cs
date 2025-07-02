@@ -9,12 +9,23 @@ class Program
 
         List<int> number = new List<int>();
 
+
+
         int yourNumber = 1;
         while (yourNumber != 0)
         {
             Console.Write("Enter a list of numbers and type 0 when finished. ");
             yourNumber = int.Parse(Console.ReadLine());
-            number.Add(yourNumber);
+
+            if (yourNumber > 0)
+            {
+                number.Add(yourNumber);
+            }
+        }
+        foreach (int item in number)
+        {
+            Console.WriteLine(item);
         }
     }
 }
+// core requirement; compute the sum, average, and the maximum number.
