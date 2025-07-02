@@ -9,6 +9,10 @@ class Program
 
         List<int> number = new List<int>();
 
+        float total = 0;
+        float average = 0;
+        float largest = 0;
+        float numberCount = 0;
 
 
         int yourNumber = 1;
@@ -22,10 +26,21 @@ class Program
                 number.Add(yourNumber);
             }
         }
+
         foreach (int item in number)
         {
+            total += item;
+            numberCount += 1;
+            if (item > largest)
+            {
+                largest = item;
+            }
             Console.WriteLine(item);
         }
+        average = total / numberCount;
+        Console.WriteLine($"The Sum is: {total}");
+        Console.WriteLine($"The aversge is: {average}");
+        Console.WriteLine($"The largest number is: {largest}");
+
     }
 }
-// core requirement; compute the sum, average, and the maximum number.
