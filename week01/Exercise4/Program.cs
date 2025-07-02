@@ -14,7 +14,7 @@ class Program
         {
             Console.Write("Enter a list of numbers and type 0 when finished. ");
             yourNumber = int.Parse(Console.ReadLine());
-             number.Add(yourNumber);
+            number.Add(yourNumber);
         }
     }
 }
