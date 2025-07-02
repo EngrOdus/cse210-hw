@@ -13,12 +13,13 @@ class Program
         float average = 0;
         float largest = 0;
         float numberCount = 0;
+        float lowest = 1000000000;
 
 
         int yourNumber = 1;
         while (yourNumber != 0)
         {
-            Console.Write("Enter a list of numbers and type 0 when finished. ");
+            Console.Write("Enter a list of positive and negative numbers and type 0 when finished. ");
             yourNumber = int.Parse(Console.ReadLine());
 
             if (yourNumber > 0)
@@ -35,12 +36,17 @@ class Program
             {
                 largest = item;
             }
+            if (item > 0 && item < lowest)
+            {
+                lowest = item;
+            }
             Console.WriteLine(item);
         }
         average = total / numberCount;
         Console.WriteLine($"The Sum is: {total}");
         Console.WriteLine($"The aversge is: {average}");
         Console.WriteLine($"The largest number is: {largest}");
+        Console.WriteLine($"Lowest positive number is: {lowest}");
 
     }
 }
