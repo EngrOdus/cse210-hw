@@ -7,7 +7,7 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise4 Working with a List Project.");
 
-        List<int> number = new List<int>();
+        List<float> number = new List<float>();
 
         float total = 0; //initialize sum to 0.
         float average = 0;//initialize average to 0.
