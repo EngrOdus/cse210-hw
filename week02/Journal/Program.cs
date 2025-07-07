@@ -49,7 +49,15 @@ class Program
                 entry5._entryText = Console.ReadLine();
                 DateTime currentDateTime5 = DateTime.Now;
                 entry5._date = currentDateTime5.ToShortDateString();
+
+                Journal journal1 = new Journal();
+                journal1._entry.Add(entry1);
+                journal1._entry.Add(entry2);
+                journal1._entry.Add(entry3);
+                journal1._entry.Add(entry4);
+                journal1._entry.Add(entry5);
             }
+
 
             else if (menu == 2)
             {
@@ -74,7 +82,7 @@ class Program
             else if (menu == 4)
             {
                 Journal _readFile = new Journal();
-                
+
             }
 
             else if (menu == 5)
