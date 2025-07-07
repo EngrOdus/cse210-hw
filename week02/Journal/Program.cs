@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
-        string _add = "";
+        
         int menu = 0;
         while (menu != 5)
         {
