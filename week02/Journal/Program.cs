@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class Program
 {
@@ -68,7 +69,7 @@ class Program
 
             else if (menu == 3)
             {
-                //using System.IO
+                
                 Console.Write("Enter file name. ");
                 string filename = Console.ReadLine();
                 using (StreamWriter outputFile = new StreamWriter(filename))
