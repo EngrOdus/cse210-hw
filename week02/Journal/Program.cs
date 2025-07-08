@@ -10,6 +10,7 @@ class Program
         int menu = 0;
         while (menu != 5)
         {
+        
             Console.WriteLine("Enter a MENU number and hit Enter button:");
             Console.WriteLine("To Write: press 1");
             Console.WriteLine("To Display: press 2");
@@ -21,46 +22,16 @@ class Program
 
             if (menu == 1)
             {
-
+                PromptGenenrator genenrator = new PromptGenenrator();
                 Entry entry1 = new Entry();
-                Console.WriteLine(entry1._promptText = "What was your best experience today?");
+                
+                entry1._promptText = genenrator.GetRandomPrompt();
                 entry1._entryText = Console.ReadLine();
                 DateTime currentDateTime1 = DateTime.Now;
                 entry1._date = currentDateTime1.ToShortDateString();
-
-                Entry entry2 = new Entry();
-                Console.WriteLine(entry2._promptText = "What one thing did you learn best today?");
-                entry2._entryText = Console.ReadLine();
-                DateTime currentDateTime2 = DateTime.Now;
-                entry2._date = currentDateTime2.ToShortDateString();
-
-                Entry entry3 = new Entry();
-                Console.WriteLine(entry3._promptText = "How best were you to your family today?");
-                entry3._entryText = Console.ReadLine();
-                DateTime currentDateTime3 = DateTime.Now;
-                entry3._date = currentDateTime3.ToShortDateString();
-
-                Entry entry4 = new Entry();
-                Console.WriteLine(entry4._promptText = "What do you love about your bet?");
-                entry4._entryText = Console.ReadLine();
-                DateTime currentDateTime4 = DateTime.Now;
-                entry4._date = currentDateTime4.ToShortDateString();
-
-                Entry entry5 = new Entry();
-                Console.WriteLine(entry5._promptText = "What was your favorite task achieved today?");
-                entry5._entryText = Console.ReadLine();
-                DateTime currentDateTime5 = DateTime.Now;
-                entry5._date = currentDateTime5.ToShortDateString();
-
                 journal1.AddEntry(entry1);
-                journal1.AddEntry(entry2);
-                journal1.AddEntry(entry3);
-                journal1.AddEntry(entry4);
-                journal1.AddEntry(entry5);
-
             }
-
-
+            
             else if (menu == 2)
             {
 
@@ -69,7 +40,7 @@ class Program
 
             else if (menu == 3)
             {
-                
+
                 Console.Write("Enter file name. ");
                 string filename = Console.ReadLine();
                 using (StreamWriter outputFile = new StreamWriter(filename))
