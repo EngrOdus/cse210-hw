@@ -68,14 +68,12 @@ class Program
 
             else if (menu == 3)
             {
-                Journal _saveJournal = new Journal();
-
                 //using System.IO
                 Console.Write("Enter file name. ");
                 string filename = Console.ReadLine();
                 using (StreamWriter outputFile = new StreamWriter(filename))
                 {
-                    outputFile.WriteLine(_saveJournal);
+                    outputFile.WriteLine(journal1);
                 }
                 
 
