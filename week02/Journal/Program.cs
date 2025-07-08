@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
-        
+        Journal journal1 = new Journal();
         int menu = 0;
         while (menu != 5)
         {
@@ -17,6 +17,7 @@ class Program
             Console.WriteLine("To Quit: press 5");
             Console.Write("What do you want to do? ");
             menu = Convert.ToInt32(Console.ReadLine());
+            
             if (menu == 1)
             {
 
@@ -50,19 +51,19 @@ class Program
                 DateTime currentDateTime5 = DateTime.Now;
                 entry5._date = currentDateTime5.ToShortDateString();
 
-                Journal journal1 = new Journal();
-                journal1._entry.Add(entry1);
-                journal1._entry.Add(entry2);
-                journal1._entry.Add(entry3);
-                journal1._entry.Add(entry4);
-                journal1._entry.Add(entry5);
+                journal1.AddEntry(entry1);
+                journal1.AddEntry(entry2);
+                journal1.AddEntry(entry3);
+                journal1.AddEntry(entry4);
+                journal1.AddEntry(entry5);
+            
             }
 
 
             else if (menu == 2)
             {
-                Journal _journal = new Journal();
-                _journal.DisplayAll();
+            
+                journal1.DisplayAll();
             }
 
             else if (menu == 3)
@@ -70,11 +71,7 @@ class Program
                 Journal _saveJournal = new Journal();
 
                 //using System.IO
-                string filename = "myFile.txt";
-                using (StreamWriter outputFile = new StreamWriter(filename))
-                {
-                    outputFile.WriteLine(_saveJournal);
-                }
+                
 
 
             }
