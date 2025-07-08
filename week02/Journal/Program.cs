@@ -75,7 +75,8 @@ class Program
                 {
                     outputFile.WriteLine(journal1);
                 }
-                
+
+
             }
 
             else if (menu == 4)
@@ -90,6 +91,6 @@ class Program
             }
 
         }
-        
+       
     }
 }
