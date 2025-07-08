@@ -74,7 +74,7 @@ class Program
                 string filename = Console.ReadLine();
                 using (StreamWriter outputFile = new StreamWriter(filename))
                 {
-                    outputFile.WriteLine(journal1);
+                    outputFile.WriteLine(journal1._entry);
                 }
 
 
