@@ -24,14 +24,14 @@ class Program
             {
                 PromptGenenrator genenrator = new PromptGenenrator();
                 Entry entry1 = new Entry();
-                
+
                 entry1._promptText = genenrator.GetRandomPrompt();
                 entry1._entryText = Console.ReadLine();
                 DateTime currentDateTime1 = DateTime.Now;
                 entry1._date = currentDateTime1.ToShortDateString();
                 journal1.AddEntry(entry1);
             }
-            
+
             else if (menu == 2)
             {
 
@@ -53,8 +53,7 @@ class Program
 
             else if (menu == 4)
             {
-                Journal _readFile = new Journal();
-
+                
             }
 
             else if (menu == 5)

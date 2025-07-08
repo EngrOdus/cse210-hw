@@ -9,12 +9,16 @@ public class Journal
     {
 
     }
-    //Create Methods. //
-    public void  AddEntry(Entry newEntry)
+
+    
+    //Create the AddEntry() Methods. //
+    public void AddEntry(Entry newEntry)
     {
         _entry.Add(newEntry);
-        //Console.WriteLine(_entry);
     }
+    
+    
+    //created the DisplayAll() method.
     public void DisplayAll()
     {
         Console.WriteLine("List in journal is:");
@@ -23,12 +27,16 @@ public class Journal
             Console.WriteLine($"Prompt Question: {n._promptText}, Response: {n._entryText}, Date: {n._date}");
         }
     }
+    
+
     public void SaveToFile(string fileName)
     {
-        
+
     }
+    
+
     public void LoadFromFile(string fileName)
     {
-        
+
     }
 }
