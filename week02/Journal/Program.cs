@@ -17,7 +17,7 @@ class Program
             Console.WriteLine("To Quit: press 5");
             Console.Write("What do you want to do? ");
             menu = Convert.ToInt32(Console.ReadLine());
-            
+
             if (menu == 1)
             {
 
@@ -56,13 +56,13 @@ class Program
                 journal1.AddEntry(entry3);
                 journal1.AddEntry(entry4);
                 journal1.AddEntry(entry5);
-            
+
             }
 
 
             else if (menu == 2)
             {
-            
+
                 journal1.DisplayAll();
             }
 
@@ -71,6 +71,12 @@ class Program
                 Journal _saveJournal = new Journal();
 
                 //using System.IO
+                Console.Write("Enter file name. ");
+                string filename = Console.ReadLine();
+                using (StreamWriter outputFile = new StreamWriter(filename))
+                {
+                    outputFile.WriteLine(_saveJournal);
+                }
                 
 
 
