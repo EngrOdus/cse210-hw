@@ -19,6 +19,8 @@ class Program
             Console.WriteLine("To Quit: press 5");
             Console.Write("What do you want to do? "); // Take Menu input from the user
             menu = Convert.ToInt32(Console.ReadLine()); // Re-assign the user input to the menu variable.
+            string fileName;
+
 
             if (menu == 1)
             {
@@ -43,7 +45,7 @@ class Program
             {
 
                 Console.Write("Enter file name. ");
-                string fileName = Console.ReadLine();
+                fileName = Console.ReadLine();
                 {
                     journal1.SaveToFile(fileName);
                 }
@@ -52,7 +54,13 @@ class Program
             }
 
             else if (menu == 4)
+                
             {
+                Console.Write("Enter the file name you want to load. ");
+                fileName = Console.ReadLine();
+                {
+                    journal1.LoadFromFile(fileName);
+                }
                 
             }
 

@@ -43,10 +43,11 @@ public class Journal
             }
         }
     }
-    
+
 
     public void LoadFromFile(string fileName)
     {
-
+        string readText = File.ReadAllText(fileName);
+        Console.WriteLine(readText);
     }
 }
