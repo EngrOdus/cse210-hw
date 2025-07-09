@@ -1,0 +1,6 @@
+Prompt Question: What do you love about your bet?, Response: Playfull, Date: 09-Jul-25
+Prompt Question: How best were you to your family today?, Response: Protected them from the flood, Date: 09-Jul-25
+Prompt Question: What was your best experience today?, Response: Have fun with my wife, Date: 09-Jul-25
+Prompt Question: How best were you to your family today?, Response: Prepared brakefast for them, Date: 09-Jul-25
+Prompt Question: What was your best experience today?, Response: Coding using C#, Date: 09-Jul-25
+Prompt Question: What was your favorite task achieved today?, Response: Coding Assignments, Date: 09-Jul-25

@@ -17,21 +17,31 @@ public class Journal
         _entry.Add(newEntry);
     }
     
-    
+
     //created the DisplayAll() method.
     public void DisplayAll()
     {
-        Console.WriteLine("List in journal is:");
         foreach (Entry n in _entry)
         {
             Console.WriteLine($"Prompt Question: {n._promptText}, Response: {n._entryText}, Date: {n._date}");
         }
     }
-    
+
 
     public void SaveToFile(string fileName)
     {
+        //string dirPath = @".";
+        //string fullPath = dirPath + fileName;
+        using (StreamWriter writer = new StreamWriter(fileName))
+        {
 
+            foreach (Entry n in _entry)
+            {
+                string allItems;
+                allItems = $"Prompt Question: {n._promptText}, Response: {n._entryText}, Date: {n._date}";
+                writer.WriteLine(allItems);
+            }
+        }
     }
     
 
