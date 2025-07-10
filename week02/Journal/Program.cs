@@ -1,6 +1,8 @@
 using System;
 using System.IO;
-
+// In order to exceed core requirements, I developed Greeting.cs class that get 
+//the hour of the day and print a welcome message specific to the 
+//current hour of the day.
 class Program
 {
     static void Main(string[] args)
@@ -9,12 +11,12 @@ class Program
         Greeting greet = new Greeting();
         greet.GreetingTime();
 
-        
+
         Journal journal1 = new Journal(); //Create the Journal class object.
         int menu = 0; // Initialize menu to zero.
         while (menu != 5) // create a menu comparism loop.
         {
-        
+
             Console.WriteLine("Enter a MENU number and hit Enter button:");
             Console.WriteLine("To Write: press 1");
             Console.WriteLine("To Display: press 2");
@@ -58,14 +60,14 @@ class Program
             }
 
             else if (menu == 4)
-                
+
             {
                 Console.Write("Enter the file name you want to load. ");
                 fileName = Console.ReadLine();
                 {
                     journal1.LoadFromFile(fileName);
                 }
-                
+
             }
 
             else if (menu == 5)
@@ -74,6 +76,6 @@ class Program
             }
 
         }
-       
+
     }
 }
