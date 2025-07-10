@@ -5,7 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Journal Project.");
+        //Console.WriteLine("Hello World! This is the Journal Project.");
+        Greeting greet = new Greeting();
+        greet.GreetingTime();
+
+        
         Journal journal1 = new Journal(); //Create the Journal class object.
         int menu = 0; // Initialize menu to zero.
         while (menu != 5) // create a menu comparism loop.
