@@ -38,4 +38,19 @@ public class Fraction
     {
         _bottom = bottom;
     }
+
+
+    public string GetFractionString(string topToStr, string bottomToStr)
+    {
+        topToStr = _top.ToString();
+        bottomToStr = _bottom.ToString();
+        return topToStr + "/" + bottomToStr;
+    }
+
+    public double GetDecimalValues(int topValue, int bottomValue)
+    {
+        topValue = _top;
+        bottomValue = _bottom;
+        return topValue / bottomValue;
+    }
 }
