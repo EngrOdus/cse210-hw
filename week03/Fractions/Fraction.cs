@@ -40,17 +40,18 @@ public class Fraction
     }
 
 
-    public string GetFractionString(string topToStr, string bottomToStr)
+    public string GetFractionString(string top, string bottom)
     {
-        topToStr = _top.ToString();
-        bottomToStr = _bottom.ToString();
-        return topToStr + "/" + bottomToStr;
+        top = GetTop().ToString();
+        bottom = GetBottom().ToString();
+        return top + "/" + bottom;
     }
 
-    public double GetDecimalValues(int topValue, int bottomValue)
+    public Decimal GetDecimalValues(int topValue, int bottomValue)
     {
         topValue = _top;
         bottomValue = _bottom;
-        return topValue / bottomValue;
+        Decimal result = Decimal.Divide(topValue, bottomValue);
+        return result;
     }
 }
