@@ -1,4 +1,10 @@
-public class Words
+public class Word
 {
-    
+
+
+
+    public Word()
+    {
+        
+    }
 }
