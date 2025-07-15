@@ -64,6 +64,10 @@ public class Scripture
     public void DisplayScriptureQuote()
     {
         string quote = GetScriptureQuote();
+        //This display method will randomly
+        //pick words from the quote and call
+        //word class to do the replacement
+        //and return the replaced string.
     }
 
 }
