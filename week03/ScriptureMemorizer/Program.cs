@@ -7,7 +7,7 @@ class Program
         Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
         Scripture display = new Scripture();
-        display.SetScriptureQuote();
+        display.SetScriptureQuote(); 
         //Reference reff = new Reference();
 
 
