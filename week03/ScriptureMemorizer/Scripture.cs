@@ -2,12 +2,18 @@ public class Scripture
 {
     private string _scriptureNumber;
     private string _scriptureQuote;
-    
+
 
 
     public Scripture()
     {
 
+    }
+
+    public string GetScriptureNumber()
+    {
+        SetScriptureNumber();
+        return _scriptureNumber;
     }
 
     Reference refere1 = new Reference();
@@ -16,10 +22,11 @@ public class Scripture
         _scriptureNumber = refere1.GetReference();
     }
 
-    public string GetScriptureNumber()
+
+    public string GetScriptureQuote()
     {
-        SetScriptureNumber();
-        return _scriptureNumber;
+        SetScriptureQuote();
+        return _scriptureQuote;
     }
 
     public void SetScriptureQuote()
@@ -51,6 +58,12 @@ public class Scripture
         }
 
         Console.WriteLine($"{_scriptureNumber}; {_scriptureQuote}");
+    }
+
+
+    public void DisplayScriptureQuote()
+    {
+        string quote = GetScriptureQuote();
     }
 
 }
