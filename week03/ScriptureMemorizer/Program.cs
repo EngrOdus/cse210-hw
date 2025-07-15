@@ -6,7 +6,11 @@ class Program
     {
         Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
-        Reference reff = new Reference();
-        Console.WriteLine(reff.GetReference());
+        Scripture display = new Scripture();
+        display.SetScriptureQuote();
+        //Reference reff = new Reference();
+
+
+        //reff.GetReference();
     }
 }

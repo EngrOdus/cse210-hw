@@ -5,7 +5,7 @@ public class Reference
     private string _scriptureReference;
     //private List<string> _reference = new List<string>();
 
-    private string[] _reference = { "Alma 2:2", "John 15:4", "2Nephi 2:2", "1Cor 15:29", "Moses 6: 65" };
+    private string[] _reference = { "Alma 2:33", "John 15:4", "2Nephi 2:2", "1Cor 15:29", "Moses 6: 65" };
 
 
     public Reference()
