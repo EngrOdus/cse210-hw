@@ -2,6 +2,7 @@ public class Scripture
 {
     private string _scriptureNumber;
     private string _scriptureQuote;
+    //private string[] _scriptureList;
 
 
 
@@ -29,18 +30,18 @@ public class Scripture
         return _scriptureQuote;
     }
 
-    public void SetScriptureQuote()
+    public string SetScriptureQuote()
     {
         string number = GetScriptureNumber();
 
         if (number == "Alma 2:33")
         {
-            _scriptureQuote = "But Alma, with his guards, contended with the guards of the king of the Lamanites until he slew and drove them back.";
+            _scriptureQuote = "But Alma with his guards contended with the guards of the king of the Lamanites until he slew and drove them back.";
         }
 
         else if (number == "John 15:4")
         {
-            _scriptureQuote = "Abide in me, and I in you.As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me.";
+            _scriptureQuote = "Abide in me and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me.";
         }
 
         else if (number == "2Nephi 2:2")
@@ -58,13 +59,30 @@ public class Scripture
         }
 
         Console.WriteLine($"{_scriptureNumber}; {_scriptureQuote}");
+        return _scriptureQuote;
+
     }
 
 
     public void DisplayScriptureQuote()
     {
+
         string quote = GetScriptureQuote();
+
         //This display method will randomly
+        string click = "";
+        while (click != "quit")
+        {
+            Console.Write("Do you want to guess? ");
+            click = Console.ReadLine();
+            if (click != "quit")
+            {
+                Random random = new Random();
+                int rand = random.Next(quote.Length);
+                Console.WriteLine(quote[rand]);//This randomly print a letter to 
+                                                //the console instead of a word(s).
+            }
+        }
         //pick words from the quote and call
         //word class to do the replacement
         //and return the replaced string.
