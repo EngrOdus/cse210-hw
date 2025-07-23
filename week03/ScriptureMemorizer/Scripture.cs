@@ -2,7 +2,7 @@ public class Scripture
 {
     private string _scriptureNumber;
     private string _scriptureQuote;
-    //private string[] _scriptureList;
+    private List<string> _words;
 
 
 
@@ -27,7 +27,9 @@ public class Scripture
     public string GetScriptureQuote()
     {
         SetScriptureQuote();
+        _words = _scriptureQuote.Split(" ").ToList();
         return _scriptureQuote;
+        
     }
 
     public string SetScriptureQuote()
@@ -62,30 +64,65 @@ public class Scripture
         return _scriptureQuote;
 
     }
+    
 
-
-    public void DisplayScriptureQuote()
+    public string click;
+    public void HideRandomWords()
     {
+        int indexesToHide;
 
         string quote = GetScriptureQuote();
 
         //This display method will randomly
-        string click = "";
+
         while (click != "quit")
+
         {
             Console.Write("Do you want to guess? ");
             click = Console.ReadLine();
             if (click != "quit")
             {
+                int counter = 0;
+                HashSet<int> indexeHidden = new HashSet<int>();
                 Random random = new Random();
-                int rand = random.Next(quote.Length);
-                Console.WriteLine(quote[rand]);//This randomly print a letter to 
-                                                //the console instead of a word(s).
+
+                while (indexeHidden.Count < _words.Count)
+                {
+
+                    Console.Write("Press the ENTER button to hide words. ");
+                    click = Console.ReadLine();
+
+
+                    do
+                    {
+                        indexesToHide = random.Next(_words.Count);
+                    }
+                    while (indexeHidden.Contains(indexesToHide));
+                    indexeHidden.Add(indexesToHide);
+                    counter += 1;
+                    Console.WriteLine(indexeHidden);
+                    if (click == "quit")
+                    {
+                        click = "quit";
+                        break;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < _words.Count; i++)
+                        {
+                            if (indexeHidden.Contains(i))
+                            {
+                                
+                                Console.WriteLine(indexeHidden);
+                                //Console.Write("__");
+                            }
+                        }
+                    }
+                }
             }
+
         }
-        //pick words from the quote and call
-        //word class to do the replacement
-        //and return the replaced string.
+        
     }
 
 }

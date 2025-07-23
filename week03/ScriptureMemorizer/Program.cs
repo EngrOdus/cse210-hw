@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -7,9 +8,13 @@ class Program
         Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
         Scripture display = new Scripture();
+        Word word1 = new Word();
         //display.SetScriptureQuote();
         //Reference reff = new Reference();
-        display.DisplayScriptureQuote();
+        //display.GetScriptureQuote();
+        display.HideRandomWords();
+        word1.SetWordToHide();
+
 
 
         //reff.GetReference();

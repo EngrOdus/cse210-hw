@@ -17,7 +17,7 @@ public class Reference
     {
         _scriptureReference = GetRandomReference();
     }
-
+  
     public string GetReference()
     {
         SetReference();
