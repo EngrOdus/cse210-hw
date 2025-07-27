@@ -32,6 +32,7 @@ class Program
         resume._personalName = Console.ReadLine();
         resume._job.Add(job1);
         resume._job.Add(job2);
+        Console.Clear();
 
         resume.DisplayResume(); //Called the DisplayResume() metthod.
     }
