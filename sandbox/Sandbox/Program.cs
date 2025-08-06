@@ -24,6 +24,6 @@ class Program
 
     public static void DisplayEmployeeInformation(Employee employees)
     {
-        Console.WriteLine($"Name: {employees.GetName()}{Environment.NewLine}ID Number: {employees.GetIdNumber()}{Environment.NewLine}Monthly Salary: {employees.GetPay()}");//
+        Console.WriteLine($"Name: {employees.GetName()}{Environment.NewLine}ID Number: {employees.GetIdNumber()}{Environment.NewLine}Monthly Salary: {employees.GetPay()}");
     }
 }
