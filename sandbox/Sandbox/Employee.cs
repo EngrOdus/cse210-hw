@@ -1,4 +1,4 @@
-public class Employee
+public abstract class Employee
 {
     protected string _name;
     protected string _country;
@@ -28,4 +28,6 @@ public class Employee
     {
         _idNumber = idNumber;
     }
+
+    public abstract float GetPay();
 }
